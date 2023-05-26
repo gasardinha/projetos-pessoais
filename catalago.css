@@ -34,9 +34,8 @@ nav a {
     align-items: flex-end;
 }
 
-.pesquisa img {
-    padding: 2px;
-    width: 7%;
+a img {
+    width: 50%;   
 }
 
 .chamada-principal {
@@ -46,10 +45,11 @@ nav a {
     align-items: center;
     justify-content: center;
     height: 32em;
+    text-align: center;
 }
 
 .chamada-principal p {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
@@ -149,12 +149,17 @@ nav a {
 
 @media screen and (min-width: 200px) and (max-width: 640px) { 
 
-    .produtos {
+    main {
         width: 100%;
+    }
+
+    .produtos {
+        width: 99%;
         display: flex;
         flex-direction: column;
         height: 1300px;
         background: none;
+        align-items: center;
     } 
 
     .produto1, .produto2, .produto3 {
