@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #titulo {
+            font-family: sans-serif;
+            
+        }
+
+        #subtitulo {
+            font-family: sans-serif;
+            float: left;
+            margin: 7%;
+        }
+
+        fieldset {
+            border: 0;
+        }
+
+        body {
+            background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(180,182,182,1) 100%);
+            font-family: sans-serif;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            color: black;
+            height: 100vh;
+        }
+
+        
+
+        input, select, textarea, button {
+            border-radius: 5px;
+        
+        }
+
+        .campo {
+            margin-bottom: 1em;
+        }
+
+        .campo label {
+            margin-bottom: 0.2em;
+            display: block;
+        }
+
+        fieldset .grupo .campo {
+            float: left;
+            margin-right: 1em;
+        }
+
+        #senioridade-div {
+            
+            width: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            height: 50px;
+        }
+
+        .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+            padding: 0.2em;
+            border: 1px solid rgb(124, 117, 117);
+            box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+            display: block;
+            width: 100%;
+            height: 30px;
+        }
+
+        .campo textarea {
+            width: 100%;
+        }
+
+        .campo select option {
+            padding-right: 1em;
+        }
+
+        .campo input:focus, .camp select:focus, .campo textarea:focus {
+            background: red;
+        }
+
+        .botao {
+            font-size: 1.2em;
+            background-color: bisque;
+            border: 0;
+            margin-bottom: 1em;
+            color: black;
+            padding: 0.2em 0.6em;
+            box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+            text-shadow: 1px 1px 1px white;
+            font-weight: bold;
+        }
+
+        #check {
+            display: inline-block;
+        }
+
+        @media screen and (min-width: 200px) and (max-width: 640px) { 
+
+        main {
+            padding: 0px;
+        }
+
+        body {
+            width: 90%;
+            height: auto;
+        } 
+
+        form {
+            width: 90%;
+        }
+
+        .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+           width: 90%;
+        }
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 896px) { 
+        body {
+            width: 90%;
+            height: 100vh;
+        } 
+    }
+
+    </style>
+
+</head>
+<body>
+    <!--<nav><span><a href="portfolio.html">Inicio</a></span></nav>-->
+    <main>
+        <div style="margin-top: 2%;">
+            <h1 id="titulo">Cadastro de DEVs</h1>
+            <p id="subtitulo">Complete suas informações:</p>
+            <br>
+        </div>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <strong><label for="nome">Nome</label></strong>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="campo">
+                    <strong><label for="sobrenome">Sobrenome</label></strong>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+            </fieldset>
+                <div class="campo">
+                    <strong><label for="email">Email:</label></strong>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="campo">
+                    <strong><label >De qual lado da aplicação você desenvolve?</label></strong>
+                    <label>
+                        <input type="radio" name="devweb" value="frontend" checked>Front-End
+                    </label>
+                    <label>
+                        <input type="radio" name="devweb" value="backend">Back-End
+                    </label>
+                    <label>
+                        <input type="radio" name="devweb" value="fullstack">fullstack
+                    </label>
+                </div>
+                <div id="senioridade-div">
+                    <strong><label for="senioridade">Senioridade: </label></strong>
+                    <select id="senioridade"> 
+                        <option selected disabled value=""> Selecione</option>
+                        <option>Junior</option>
+                        <option>Pleno</option>
+                        <option>Senior</option>
+                    </select><br><br>
+                </div>
+                <fieldset class="grupo">
+                    <div id="check">
+                        <strong><label>Selecione as tecnologias que utiliza:</label><br><br></strong>
+                        <input type="checkbox" id="tecnologia1" nome="tecnologia1" value="HTML">
+                        <label for="tecnologia1">HTML</label>
+                        <input type="checkbox" id="tecnologia2" nome="tecnologia2" value="CSS">
+                        <label for="tecnologia2">CSS</label>
+                        <input type="checkbox" id="tecnologia3" nome="tecnologia3" value="JavaScript">
+                        <label for="tecnologia3">JavaScript</label>
+                        <input type="checkbox" id="tecnologia4" nome="tecnologia4" value="PHP">
+                        <label for="tecnologia4">PHP</label>
+                        <input type="checkbox" id="tecnologia5" nome="tecnologia5" value="C#">
+                        <label for="tecnologia5">C#</label>
+                        <input type="checkbox" id="tecnologia6" nome="tecnologia6" value="Python">
+                        <label for="tecnologia6">Python</label>
+                        <input type="checkbox" id="tecnologia7" nome="tecnologia7" value="Java">
+                        <label for="tecnologia7">Java</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <br>
+                    <strong><label>Conte um pouco da sua experiência:</label></strong><br><br>
+                    <textarea name="experiencia" id="experiencia" row="6" style="width: 100%; height: 6em;"></textarea>
+                </div>
+                <button type="submit" class="botao">Concluído</button>
+                <span><a href="portfolio.html" style="text-decoration: none; color: white; margin-left: 10px;"> <ins>Voltar</ins></a></span>
+        </form>
+    </main>
+</body>
+</html>
