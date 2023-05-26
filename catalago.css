@@ -49,7 +49,7 @@ nav a {
 }
 
 .chamada-principal p {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -145,6 +145,31 @@ nav a {
     padding: 15px;
     width: 300px;
     border-radius: 5px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) { 
+    
+    main {
+        width: 90%;
+    }
+
+    .produtos {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        height: 1300px;
+        background: none;
+    } 
+
+    .produto1, .produto2, .produto3 {
+        margin-bottom: 30%;
+    }
+
+    .chamada-principal {
+        font-size: 1em;
+    margin-bottom: 20px;
+    width: 40%;
+    }
 }
 
 
